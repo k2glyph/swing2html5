@@ -51,7 +51,7 @@ public class JButton2HTML extends J2HTML {
 			result = "text";
 		}else if(cur.getType() == Cursor.WAIT_CURSOR){
 			result = "wait";
-		}else if(cur.getType() == Cursor.N_RESIZE_CURSOR){
+		}else if(cur.getType() == Cursor.N_RESIZE_CURSOR){		
 			result = "n-resize";
 		}else if(cur.getType() == Cursor.NE_RESIZE_CURSOR){
 			result = "ne-resize";
@@ -67,7 +67,9 @@ public class JButton2HTML extends J2HTML {
 			result = "w-resize";
 		}else if(cur.getType() == Cursor.NW_RESIZE_CURSOR){
 			result = "nw-resize";
-		}		
+		}else if(cur.getType() == Cursor.CUSTOM_CURSOR){
+			result = "url("+cur.getName()+"),default";
+		}
 		
 		return result;		
 	}
