@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Font;
 import java.io.IOException;
 
 import javax.swing.JButton;
@@ -16,9 +17,10 @@ public class Frame extends JFrame {
 		this.setSize(400, 400);		
 		this.setTitle("swing2HTML5");
 		this.setLayout(null);
-		this.getContentPane().setBackground(Color.red);
+		this.getContentPane().setBackground(Color.GREEN);
 		
 		JButton b1 = new JButton("Kevin");
+		b1.setFont(new Font("Times New Roman", Font.PLAIN, 22));
 		b1.setBounds(50, 200, 100, 30);
 		this.add(b1);
 		

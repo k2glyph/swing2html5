@@ -13,13 +13,14 @@ public class JButton2HTML extends J2HTML {
 		JButton b = (JButton)comp;
 		String button = "";
 		String imgStyle = "";
+		
 		if(b.getIcon() != null){
 			JHImageIcon img = (JHImageIcon) b.getIcon();
 			imgStyle += "background: url("+img.getFilename()+") no-repeat";
 			//button+="<img src=\""+ img.getFilename() +"\">\n";
 		}
 		
-		button += "<button type=\"button\" style=\"position:absolute;width:"+b.getWidth()+"px;height:"+b.getHeight()+"px;top:"+b.getY()+"px;left:"+b.getX()+"px;"+imgStyle+"\">"+b.getText();
+		button += "<button type=\"button\" style=\"position:absolute;width:"+b.getWidth()+"px;height:"+b.getHeight()+"px;top:"+b.getY()+"px;left:"+b.getX()+"px;"+imgStyle+";"+fontStyle(comp)+"\">"+b.getText();
 		
 		
 		
