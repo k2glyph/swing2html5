@@ -60,7 +60,7 @@ public class Frame extends JFrame {
 		try {
 			Swing2HTML5.compileJFrame(frame, "output.html");
 			System.out.println("HTML5 page compiled");
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
