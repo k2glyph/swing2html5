@@ -27,29 +27,49 @@ public class JButton2HTML extends J2HTML {
 		String cursor = "cursor:"+getCursor(b.getCursor())+";";		
 		
 		button += "<button type=\"button\" style=\"position:absolute;width:"+b.getWidth()+"px;height:"+b.getHeight()+"px;top:"+b.getY()+"px;left:"+b.getX()+"px;"+imgStyle+";"+fontStyle(comp)+";"+color+";"+backgroundColor+";"+cursor+"\">"+b.getText();
-						
-		button+="</button>\n";		
-		
+								
+		button+="</button>\n";				
 		return button;
 	}
 	
-	
-	private String getCursor(Cursor c){
+	/**This method takes a Cursor as a parameter, and returns<br />
+	 * the css equivalent in the form of a String
+	 * 
+	 * @param Curcor 
+	 * @return String css-property
+	 */
+	private String getCursor(Cursor cur){
 		String result = "default";
 		
-		if(c.getType() == Cursor.CROSSHAIR_CURSOR){
+		if(cur.getType() == Cursor.CROSSHAIR_CURSOR){
 			result = "crosshair";
-		}else if(c.getType() == Cursor.HAND_CURSOR){
+		}else if(cur.getType() == Cursor.HAND_CURSOR){
 			result ="hand";
-		}else if(c.getType() == Cursor.MOVE_CURSOR){
+		}else if(cur.getType() == Cursor.MOVE_CURSOR){
 			result = "move";
-		}else if(c.getType() == Cursor.TEXT_CURSOR){
+		}else if(cur.getType() == Cursor.TEXT_CURSOR){
 			result = "text";
-		}
+		}else if(cur.getType() == Cursor.WAIT_CURSOR){
+			result = "wait";
+		}else if(cur.getType() == Cursor.N_RESIZE_CURSOR){
+			result = "n-resize";
+		}else if(cur.getType() == Cursor.NE_RESIZE_CURSOR){
+			result = "ne-resize";
+		}else if(cur.getType() == Cursor.E_RESIZE_CURSOR){
+			result = "e-resize";
+		}else if(cur.getType() == Cursor.SE_RESIZE_CURSOR){
+			result = "se-resize";
+		}else if(cur.getType() == Cursor.S_RESIZE_CURSOR){
+			result = "s-resize";
+		}else if(cur.getType() == Cursor.SW_RESIZE_CURSOR){
+			result = "sw-resize";
+		}else if(cur.getType() == Cursor.W_RESIZE_CURSOR){
+			result = "w-resize";
+		}else if(cur.getType() == Cursor.NW_RESIZE_CURSOR){
+			result = "nw-resize";
+		}		
 		
-		
-		return result;
-		
+		return result;		
 	}
 
 }
