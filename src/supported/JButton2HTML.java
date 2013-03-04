@@ -5,6 +5,7 @@ import javax.swing.JComponent;
 
 import swing2html5.J2HTML;
 import swing2html5.JHImageIcon;
+import swing2html5.Swing2HTML5;
 
 public class JButton2HTML extends J2HTML {
 
@@ -19,9 +20,10 @@ public class JButton2HTML extends J2HTML {
 			imgStyle += "background: url("+img.getFilename()+") no-repeat";
 		}
 		
-		//String color = b.getForeground();
+		String color = "color:#"+Swing2HTML5.toHex(b.getForeground())+";";
+		String backgroundColor = "background-color:#"+Swing2HTML5.toHex(b.getBackground())+";";
 		
-		button += "<button type=\"button\" style=\"position:absolute;width:"+b.getWidth()+"px;height:"+b.getHeight()+"px;top:"+b.getY()+"px;left:"+b.getX()+"px;"+imgStyle+";"+fontStyle(comp)+"\">"+b.getText();
+		button += "<button type=\"button\" style=\"position:absolute;width:"+b.getWidth()+"px;height:"+b.getHeight()+"px;top:"+b.getY()+"px;left:"+b.getX()+"px;"+imgStyle+";"+fontStyle(comp)+";"+color+";"+backgroundColor+"\">"+b.getText();
 		
 		
 		
