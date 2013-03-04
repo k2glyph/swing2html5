@@ -7,8 +7,7 @@ import swing2html5.J2HTML;
 import swing2html5.JHImageIcon;
 
 public class JLabel2HTML extends J2HTML {
-
-
+	
 	public String getHTML(JComponent comp) {
 		JLabel l = (JLabel)comp;
 		
