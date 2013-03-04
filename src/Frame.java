@@ -23,7 +23,6 @@ public class Frame extends JFrame {
 		JButton b1 = new JButton("Kevin");
 		b1.setFont(new Font("Times New Roman", Font.BOLD, 22));
 		b1.setForeground(Color.red);
-		//b1.setBackground(Color.YELLOW);
 		b1.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
 		b1.setBounds(50, 200, 100, 30);
 		this.add(b1);
