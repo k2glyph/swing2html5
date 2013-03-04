@@ -9,10 +9,8 @@ public class JTextField2HTML extends J2HTML {
 
 	public String getHTML(JComponent comp) {
 		JTextField field = (JTextField) comp;
-		String result= "<input type = \"text\" style=position:absolute;width:"+field.getWidth()+"px;height:"+field.getHeight()+"px;top:"+field.getY()+"px;left:"+field.getX()+"px;"+"/>";
-		
-		
-		
+		String result= "<input type = \"text\" style=position:absolute;width:"+field.getWidth()+"px;height:"+field.getHeight()+"px;top:"+field.getY()+"px;left:"+field.getX()+"px;\" "+ "value=\""+field.getText()+"\"/>";
+	
 		return result;
 	}
 
