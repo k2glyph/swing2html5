@@ -24,9 +24,7 @@ public class JLabel2HTML extends J2HTML {
 			txt = "";
 		}
 		
-		
-		
-		button += "<p style=\"position:absolute;top:"+l.getY()+"px;left:"+l.getX()+"px;"+imgStyle+";width:"+l.getWidth()+";height:"+l.getHeight()+"\">"+txt;
+		button += "<p style=\"position:absolute;top:"+l.getY()+"px;left:"+l.getX()+"px;"+imgStyle+";width:"+l.getWidth()+";height:"+l.getHeight()+";"+fontStyle(comp)+"\">"+txt;
 		
 		if(l.getIcon() != null){
 			JHImageIcon img = (JHImageIcon) l.getIcon();
