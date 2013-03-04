@@ -39,6 +39,12 @@ public class JButton2HTML extends J2HTML {
 		
 		if(c.getType() == Cursor.CROSSHAIR_CURSOR){
 			result = "crosshair";
+		}else if(c.getType() == Cursor.HAND_CURSOR){
+			result ="hand";
+		}else if(c.getType() == Cursor.MOVE_CURSOR){
+			result = "move";
+		}else if(c.getType() == Cursor.TEXT_CURSOR){
+			result = "text";
 		}
 		
 		
