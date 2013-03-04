@@ -3,7 +3,6 @@ package swing2html5;
 import java.awt.Color;
 import java.awt.Component;
 import java.io.File;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -43,7 +42,7 @@ public class Swing2HTML5 {
 	}
 	
 		
-	public static void compileJFrame(JFrame inFrame, String filename) throws IOException{
+	public static void compileJFrame(JFrame inFrame, String filename) throws Exception{
 		PrintWriter writer = new PrintWriter(new File(filename));		
 		frame = inFrame;
 		writer.println(startHtml);
@@ -68,7 +67,7 @@ public class Swing2HTML5 {
 		return hex;		
 	}
 	
-	public static String bodyTag(){
+	public static String bodyTag() throws Exception{
 		String result = "<body style=\"background-color:#"+toHex(frame.getContentPane().getBackground())+";width:"+frame.getWidth()+";height:\""+frame.getHeight()+"\">\n";		
 				
 		result += jPanel2html5tags();
@@ -78,7 +77,7 @@ public class Swing2HTML5 {
 	}
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	private static String jPanel2html5tags(){
+	private static String jPanel2html5tags() throws Exception{
 		String result = "";
 		
 		Component comp = null;
@@ -102,7 +101,9 @@ public class Swing2HTML5 {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-			}			
+			}else{
+				throw new Exception(temp + " isn't supported yet");
+			}
 			
 			
 		}
