@@ -20,7 +20,7 @@ public class Frame extends JFrame {
 		this.getContentPane().setBackground(Color.GREEN);
 		
 		JButton b1 = new JButton("Kevin");
-		b1.setFont(new Font("Times New Roman", Font.PLAIN, 22));
+		b1.setFont(new Font("Times New Roman", Font.BOLD, 22));
 		b1.setBounds(50, 200, 100, 30);
 		this.add(b1);
 		
