@@ -4,6 +4,7 @@ import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import swing2html5.JHImageIcon;
@@ -35,9 +36,13 @@ public class Frame extends JFrame {
 		label.setBounds(100, 0, 100, 40);
 		this.add(label);		
 		
-		JTextField text = new JTextField();
+		JTextField text = new JTextField("Test");
 		text.setBounds(150, 150, 100, 20);
 		this.add(text);
+		
+		JTextArea area = new JTextArea("Test område");
+		area.setBounds(0, 200, 200, 200);
+		this.add(area);
 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
