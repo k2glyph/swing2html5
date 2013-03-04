@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.io.IOException;
 
@@ -23,6 +24,7 @@ public class Frame extends JFrame {
 		b1.setFont(new Font("Times New Roman", Font.BOLD, 22));
 		b1.setForeground(Color.red);
 		//b1.setBackground(Color.YELLOW);
+		b1.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
 		b1.setBounds(50, 200, 100, 30);
 		this.add(b1);
 		
