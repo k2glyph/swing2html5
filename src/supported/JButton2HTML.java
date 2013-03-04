@@ -17,8 +17,9 @@ public class JButton2HTML extends J2HTML {
 		if(b.getIcon() != null){
 			JHImageIcon img = (JHImageIcon) b.getIcon();
 			imgStyle += "background: url("+img.getFilename()+") no-repeat";
-			//button+="<img src=\""+ img.getFilename() +"\">\n";
 		}
+		
+		//String color = b.getForeground();
 		
 		button += "<button type=\"button\" style=\"position:absolute;width:"+b.getWidth()+"px;height:"+b.getHeight()+"px;top:"+b.getY()+"px;left:"+b.getX()+"px;"+imgStyle+";"+fontStyle(comp)+"\">"+b.getText();
 		

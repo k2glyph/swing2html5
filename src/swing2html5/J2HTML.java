@@ -22,9 +22,7 @@ public abstract class J2HTML {
 		
 		if(font.isBold()){
 			fontStyle += "font-weight:bold;";
-		}
-		
-		System.out.println(fontStyle);
+		}		
 		
 		return fontStyle;
 	}

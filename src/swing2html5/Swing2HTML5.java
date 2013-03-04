@@ -1,5 +1,6 @@
 package swing2html5;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.io.File;
 import java.io.IOException;
@@ -60,12 +61,16 @@ public class Swing2HTML5 {
 		return result;		
 	}
 	
-	public static String bodyTag(){
-		String hex = Integer.toHexString(frame.getContentPane().getBackground().getRGB());
+	
+	public static String toHex(Color col){
+		String hex = Integer.toHexString(col.getRGB());
 		hex = hex.substring(2, hex.length());
-		String result = "<body style=\"background-color:#"+hex+";width:"+frame.getWidth()+";height:\""+frame.getHeight()+"\">\n";		
-		
-		
+		return hex;		
+	}
+	
+	public static String bodyTag(){
+		String result = "<body style=\"background-color:#"+toHex(frame.getContentPane().getBackground())+";width:"+frame.getWidth()+";height:\""+frame.getHeight()+"\">\n";		
+				
 		result += jPanel2html5tags();
 		
 		result += "</body>";
