@@ -32,7 +32,7 @@ public class Frame2 extends JFrame {
 		
 		try {
 			Swing2HTML5.compileJFrame(frame, "output2.html");
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
