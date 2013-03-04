@@ -1,16 +1,10 @@
 import java.awt.Color;
-import java.awt.Cursor;
 import java.awt.Font;
-import java.awt.Image;
-import java.awt.Point;
-import java.awt.Toolkit;
-import java.io.File;
-import java.io.IOException;
 
-import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 import swing2html5.JHImageIcon;
 import swing2html5.Swing2HTML5;
@@ -27,27 +21,23 @@ public class Frame extends JFrame {
 
 		JButton b1 = new JButton("Kevin");
 		b1.setFont(new Font("Times New Roman", Font.BOLD, 22));
-		b1.setForeground(Color.red);
-		Image img;
-		try {
-			img = ImageIO.read(new File("mig.gif"));
-			Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(img, new Point(), "mig.gif");			
-			b1.setCursor(cur);
+		b1.setForeground(Color.BLACK);
 
-			b1.setBounds(50, 200, 100, 30);
-			this.add(b1);
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
+		b1.setBounds(50, 200, 100, 30);
+		this.add(b1);
+		
 		JButton b2 = new JButton(new JHImageIcon("man.png"));
 		b2.setBounds(0, 0, 40, 40);
 		this.add(b2);
 
 		JLabel label = new JLabel("Min Label");
+		label.setFont(new Font("Times New Roman",Font.ITALIC,14));
 		label.setBounds(100, 0, 100, 40);
 		this.add(label);		
+		
+		JTextField text = new JTextField();
+		text.setBounds(150, 150, 100, 20);
+		this.add(text);
 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
