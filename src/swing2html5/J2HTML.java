@@ -11,17 +11,17 @@ public abstract class J2HTML {
 		Font font = comp.getFont();
 		
 		//font family
-		fontStyle +="font-family:\""+font.getFamily()+"\",Times New Roman;";
+		fontStyle +="font-family:'"+font.getFamily()+"';";
 		
 		//font size
-		fontStyle +="font-size:\""+font.getSize()+"\";";
+		fontStyle +="font-size:"+font.getSize()+"px;";
 		
 		if(font.isItalic()){
-			fontStyle += "font-style:\"italic\";";
+			fontStyle += "font-style:italic;";
 		}
 		
 		if(font.isBold()){
-			fontStyle += "font-weight:\"bold\";";
+			fontStyle += "font-weight:bold;";
 		}
 		
 		System.out.println(fontStyle);
