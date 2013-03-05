@@ -38,6 +38,7 @@ public class Frame extends JFrame {
 		
 		JTextField text = new JTextField("Test");
 		text.setBounds(150, 150, 100, 20);
+		text.setFont(new Font("Times New Roman",Font.BOLD,26));
 		this.add(text);
 		
 		JTextArea area = new JTextArea("Test område");
