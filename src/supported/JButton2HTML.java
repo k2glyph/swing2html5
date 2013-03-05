@@ -24,7 +24,7 @@ public class JButton2HTML extends J2HTML {
 		
 		String color = "color:#"+Swing2HTML5.toHex(b.getForeground())+";";
 		String backgroundColor = "background-color:#"+Swing2HTML5.toHex(b.getBackground())+";";
-		String cursor = "cursor:"+getCursor(b.getCursor())+";";		
+		String cursor = "cursor:"+getCursor(b.getCursor())+";";
 		
 		button += "<button type=\"button\" style=\"position:absolute;width:"+b.getWidth()+"px;height:"+b.getHeight()+"px;top:"+b.getY()+"px;left:"+b.getX()+"px;"+imgStyle+";"+fontStyle(comp)+";"+color+";"+backgroundColor+";"+cursor+"\">"+b.getText();
 								
