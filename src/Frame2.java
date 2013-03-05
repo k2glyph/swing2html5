@@ -1,5 +1,4 @@
 import java.awt.BorderLayout;
-import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
