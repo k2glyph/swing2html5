@@ -1,6 +1,7 @@
 package supported;
 
 import java.awt.Cursor;
+import java.net.URL;
 
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -19,7 +20,12 @@ public class JButton2HTML extends J2HTML {
 		
 		if(b.getIcon() != null){
 			JHImageIcon img = (JHImageIcon) b.getIcon();
-			imgStyle += "background: url("+img.getFilename()+") no-repeat";
+			URL url = img.getURL();
+			if(img.getFilename() != ""){
+				imgStyle += "background: url("+img.getFilename()+") no-repeat";
+			}else if(url.toString() != ""){
+				imgStyle += "background: url("+url+") no-repeat";
+			}			
 		}
 		
 		String color = "color:#"+Swing2HTML5.toHex(b.getForeground())+";";
