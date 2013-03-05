@@ -12,7 +12,7 @@ public class JTextArea2HTML extends J2HTML {
 		String result = "";
 		JTextArea area = (JTextArea)comp;
 		
-		result = "<textarea style=\"position:absolute;width:"+area.getWidth()+"px;height:"+area.getHeight()+"px;top:"+area.getY()+"px;left:"+area.getX()+"px;\">";                 
+		result = "<textarea style=\"position:absolute;width:"+area.getWidth()+"px;height:"+area.getHeight()+"px;top:"+area.getY()+"px;left:"+area.getX()+"px;"+fontStyle(area)+"\">";                 
         result +="</textarea>";
 		
 		return result;
