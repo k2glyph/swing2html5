@@ -1,7 +1,29 @@
 <!DOCTYPE HTML>
 <html>
-<head><title>swing2HTML5</title></head>
+<head>
+<title>swing2HTML5</title>
+
+<style>
+.ui-resizable-helper { border: 1px dotted gray; }
+.resizable{display:block; width:400px; height:400px; padding:0px; border:0px solid gray; overflow:hidden; position:relative;}
+iframe{ width:100%; height:100%;}
+</style>
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css" rel="stylesheet"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script>
+$(function() {
+$( ".resizable" ).resizable({
+animate: true, animateEasing: 'swing', animateDuration: 500
+});
+});
+</script>
+
+</head>
 <body>
-<iframe src="output.html" width="400px;" height="400px;" scrolling="no" />
+<div class="resizable">
+<iframe src="output.html" scrolling="no" />
+</div>
 </body>
 </html>
